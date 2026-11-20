@@ -7,7 +7,7 @@ tags:
   - testing
   - planning
 version: 1.0.0
-author: Prompt Keeper Library
+author: Prompt Library
 category: engineering
 icon: TP
 ---

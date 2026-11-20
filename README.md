@@ -1,4 +1,4 @@
-# Prompt Keeper Library
+# Prompt Library
 
 A starter asset repository for [Prompt Keeper](https://github.com/Mylifeforrent/prompt-keeper). It uses the canonical layout the app scans when you connect a repository, and it ships nine demo assets that cover every supported file shape.
 
@@ -132,7 +132,7 @@ folder: engineering/git
 tags:
   - git
 version: 1.1.0
-author: Prompt Keeper Library
+author: Prompt Library
 category: engineering
 icon: GC
 ---
@@ -177,7 +177,7 @@ An MCP file is one JSON object per server. Credential-like `env` and `headers` v
 
 1. Open **Sync** and choose **Connect repository**.
 2. Enter the repository address:
-   - For this local folder, use its absolute path, for example `/Users/you/vscode-workspace/prompt-keeper-library`, as the repository URL.
+   - For this local folder, use its absolute path, for example `/Users/you/vscode-workspace/prompt-library`, as the repository URL.
    - After pushing to a Git host, use the HTTPS or SSH URL instead.
 3. Choose **Bind existing clone** and select this directory when using the local path. Choose **App-managed clone** when using a remote URL.
 4. Keep the auto-detected layout: `prompts`, `instructions`, `skills`, and `mcp`.

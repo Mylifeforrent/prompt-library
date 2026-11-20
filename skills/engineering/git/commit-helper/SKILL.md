@@ -8,7 +8,7 @@ tags:
   - commits
   - workflow
 version: 1.1.0
-author: Prompt Keeper Library
+author: Prompt Library
 category: engineering
 icon: GC
 ---
