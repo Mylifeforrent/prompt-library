@@ -1,6 +1,6 @@
 # Prompt Library
 
-A starter asset repository for [Prompt Keeper](https://github.com/Mylifeforrent/prompt-keeper). It uses the canonical layout the app scans when you connect a repository, and it ships nine demo assets that cover every supported file shape.
+A starter asset repository for [Prompt Keeper](https://github.com/Mylifeforrent/prompt-keeper). It uses the canonical layout the app scans when you connect a repository, and it ships nine demo assets that cover every supported file shape plus 59 personal skills imported from the local agent directory.
 
 Use it as a local bind target while developing, or push it to your own Git host and connect it from the Sync workspace.
 
@@ -37,6 +37,8 @@ The demo content is arranged like this:
         ├── local/filesystem.json
         └── docs/docs-search.json
 ```
+
+`skills/agents/` holds the 59 imported personal skills. Their inventory and provenance are recorded in [`docs/imported-skills.md`](./docs/imported-skills.md).
 
 Rules that apply to every asset type:
 
@@ -147,6 +149,15 @@ Instructions go here.
 - `version`, `author`, `category`, and `icon` are free-form metadata used by the UI.
 - Skills may contain scripts and references. Prompt Keeper never executes them; the connect preflight only flags their presence as a risk.
 
+## Imported personal skills
+
+`skills/agents/` contains 59 skills copied from the local `~/.agents/skills` directory on 2026-11-20. Each skill keeps its complete directory, including references, scripts, templates, and assets; installed dependencies and caches were excluded.
+
+- Source frontmatter is unchanged. The imported files declare `name` and `description`, not Prompt Keeper IDs. Prompt Keeper allocates an asset ID on first import and tracks the skill by its repository path.
+- Several skills include scripts and non-English documentation. Prompt Keeper never executes bundled scripts; review them before dispatching a skill to an agent directory.
+- Skill content remains subject to the original authors' terms. Review the licenses before redistributing this repository.
+- See [`docs/imported-skills.md`](./docs/imported-skills.md) for the inventory and source mapping.
+
 ## MCP servers
 
 An MCP file is one JSON object per server. Credential-like `env` and `headers` values must be `${VAR}` placeholders; real values never belong in this repository.
@@ -181,7 +192,7 @@ An MCP file is one JSON object per server. Credential-like `env` and `headers` v
    - After pushing to a Git host, use the HTTPS or SSH URL instead.
 3. Choose **Bind existing clone** and select this directory when using the local path. Choose **App-managed clone** when using a remote URL.
 4. Keep the auto-detected layout: `prompts`, `instructions`, `skills`, and `mcp`.
-5. Review the preflight. It should report three Prompts, two instructions, two Skills, and two MCP servers, and it should flag one script under `skills/engineering/git/commit-helper/scripts/`.
+5. Review the preflight. It should report three Prompts, two instructions, 61 Skills, and two MCP servers. The preflight will also list the scripts contained in the imported Skills; review them before acknowledging.
 
 Prompt Keeper accepts absolute local paths and `file:` URLs for offline repositories, so you can test the full sync flow before creating a remote.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Skills"
+  short_description: "Synchronize agent skills across installed tools"
+  default_prompt: "Use $sync-skills to synchronize skills across my local AI coding tools."
