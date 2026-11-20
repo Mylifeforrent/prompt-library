@@ -1,0 +1,17 @@
+{
+  "id": "ast_yhiqxihjnep694",
+  "title": "Docs Search",
+  "description": "Query an internal documentation index over HTTP.",
+  "folder": "development/docs",
+  "tags": [
+    "docs",
+    "http"
+  ],
+  "transport": "http",
+  "url": "https://docs.example.com/mcp",
+  "headers": {
+    "X-API-Key": "${DOCS_API_KEY}"
+  },
+  "enabled": true,
+  "notes": "The repository stores only the placeholder. Set the real key locally before dispatch; Prompt Keeper redacts it from logs, audit events, and renderer payloads."
+}

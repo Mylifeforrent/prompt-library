@@ -1,0 +1,19 @@
+{
+  "id": "ast_dskfy5ksev6zk4",
+  "title": "Filesystem",
+  "description": "Read and write files inside an explicit workspace root over stdio.",
+  "folder": "development/local",
+  "tags": [
+    "filesystem",
+    "stdio"
+  ],
+  "transport": "stdio",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-filesystem",
+    "."
+  ],
+  "enabled": true,
+  "notes": "Prompt Keeper stores this definition and never launches it. The server resolves . against its own launch directory."
+}
