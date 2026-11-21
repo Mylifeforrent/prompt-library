@@ -9,10 +9,11 @@ Prompt Keeper reads this repository through its Sync workspace. The Sync workspa
 - 3 demo Prompts
 - 2 demo Agent Instructions
 - 2 demo Skills under `skills/engineering/`
-- 59 imported personal Skills under `skills/agents/`
+- 59 personal Skills under `skills/agents/`
+- 20 Skills from `chujianyun/skills` under `skills/chujianyun/`
 - 2 MCP server templates
 
-See [`docs/imported-skills.md`](./docs/imported-skills.md) for the imported skill inventory.
+See [`docs/imported-skills.md`](./docs/imported-skills.md) and [`docs/imported-chujianyun-skills.md`](./docs/imported-chujianyun-skills.md) for the imported skill inventories. Third-party licensing is recorded in [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).
 
 ## For AI agents: start here
 
@@ -64,6 +65,7 @@ mcp/<folder>/<server-name>.json
 │   └── engineering/typescript/typescript-strictness.contract.md
 ├── skills/
 │   ├── agents/                  59 imported personal Skills
+│   ├── chujianyun/              20 Skills from chujianyun/skills
 │   └── engineering/
 │       ├── git/commit-helper/
 │       └── testing/test-plan-writer/
@@ -71,8 +73,12 @@ mcp/<folder>/<server-name>.json
 │   └── development/
 │       ├── local/filesystem.json
 │       └── docs/docs-search.json
-└── docs/
-    └── imported-skills.md
+├── docs/
+│   ├── imported-skills.md
+│   └── imported-chujianyun-skills.md
+├── licenses/
+│   └── CC-BY-NC-SA-4.0.txt
+└── THIRD_PARTY_NOTICES.md
 ```
 
 Root files such as `README.md` and `LICENSE` are ignored by the asset scanner.
@@ -305,7 +311,7 @@ if ($LASTEXITCODE -ge 8) { exit $LASTEXITCODE }
    - Local: the absolute path to this directory, or a `file:` URL.
 3. Choose **App-managed clone** for a remote URL, or **Bind existing clone** for the local path.
 4. Keep the auto-detected layout: `prompts`, `instructions`, `skills`, and `mcp`.
-5. Review the preflight. It should report three Prompts, two Agent Instructions, 61 Skills, and two MCP servers.
+5. Review the preflight. It should report three Prompts, two Agent Instructions, 81 Skills, and two MCP servers.
 6. Review malformed files, duplicate IDs, credential findings, and the scripts contained in imported Skills. Confirm only after reading them.
 
 ### 6. Push changes and resolve conflicts
@@ -377,12 +383,25 @@ Prompt Keeper's connect preflight is the authoritative validator for frontmatter
 
 ## Imported skills
 
-`skills/agents/` contains 59 personal Skills copied from `~/.agents/skills` on 2026-11-20. The source frontmatter is unchanged, so these Skills declare `name` and `description` rather than Prompt Keeper IDs. Prompt Keeper allocates an asset ID on first import and tracks each Skill by its repository path.
+### Personal skills
 
-Some imported Skills contain scripts and non-English documentation. Prompt Keeper never executes bundled scripts; review them before dispatching. Skill content remains subject to the original authors' terms, so review the licenses before redistributing this repository.
+`skills/agents/` contains 59 personal Skills copied from `~/.agents/skills` on 2026-11-20. The source frontmatter is unchanged, so these Skills declare `name` and `description` rather than Prompt Keeper IDs. Prompt Keeper allocates an asset ID on first import and tracks each Skill by its repository path.
 
 See [`docs/imported-skills.md`](./docs/imported-skills.md) for the complete inventory and import rules.
 
+### chujianyun/skills
+
+`skills/chujianyun/` contains 20 Skills imported from [chujianyun/skills](https://github.com/chujianyun/skills) at commit `0d765d5fafa22d57e267d7acea43cbd65ae7b996` on 2026-11-20. The source frontmatter is unchanged. These files are licensed under CC BY-NC-SA 4.0, not MIT; see [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) and [`licenses/CC-BY-NC-SA-4.0.txt`](./licenses/CC-BY-NC-SA-4.0.txt).
+
+The import contains 1,675 files and about 191 MB, mostly offline reference assets for the wiki and ontology Skills. See [`docs/imported-chujianyun-skills.md`](./docs/imported-chujianyun-skills.md) for the inventory and import rules.
+
+### Notes for all imports
+
+Some imported Skills contain scripts and non-English documentation. Prompt Keeper never executes bundled scripts; review them before dispatching. Skill content remains subject to the original authors' terms, so review the licenses before redistributing this repository.
+
 ## License
 
-The repository scaffolding is MIT licensed. See [LICENSE](./LICENSE). Imported Skill content remains subject to the terms of its original authors.
+The repository scaffolding is MIT licensed. See [LICENSE](./LICENSE).
+
+- Personal Skills under `skills/agents/` remain subject to the terms of their original authors.
+- Skills under `skills/chujianyun/` are licensed CC BY-NC-SA 4.0. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) and [licenses/CC-BY-NC-SA-4.0.txt](./licenses/CC-BY-NC-SA-4.0.txt).
