@@ -11,9 +11,10 @@ Prompt Keeper reads this repository through its Sync workspace. The Sync workspa
 - 2 demo Skills under `skills/engineering/`
 - 59 personal Skills under `skills/agents/`
 - 20 Skills from `chujianyun/skills` under `skills/chujianyun/`
+- 113 Skills from the stage playbook under `skills/<source>/`
 - 2 MCP server templates
 
-See [`docs/imported-skills.md`](./docs/imported-skills.md) and [`docs/imported-chujianyun-skills.md`](./docs/imported-chujianyun-skills.md) for the imported skill inventories. Third-party licensing is recorded in [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).
+See [`docs/imported-skills.md`](./docs/imported-skills.md) and [`docs/imported-chujianyun-skills.md`](./docs/imported-chujianyun-skills.md) for the imported skill inventories, [`docs/imported-playbook-skills.md`](./docs/imported-playbook-skills.md) for the stage-playbook imports, and [`docs/skill-playbook-by-stage.md`](./docs/skill-playbook-by-stage.md) for a stage-by-stage skill usage roadmap. Third-party licensing is recorded in [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).
 
 ## For AI agents: start here
 
@@ -66,6 +67,16 @@ mcp/<folder>/<server-name>.json
 ├── skills/
 │   ├── agents/                  59 imported personal Skills
 │   ├── chujianyun/              20 Skills from chujianyun/skills
+│   ├── mattpocock/              8 Skills from mattpocock/skills
+│   ├── liangdabiao/             1 Skill from market-insight-claude-skill
+│   ├── 1198560751/              1 Skill from claude-skills-competitive-analysis-prd
+│   ├── forrestchang/            1 Skill from andrej-karpathy-skills
+│   ├── op7418/                  1 Skill from guizang-social-card-skill
+│   ├── helloianneo/             1 Skill from ian-xiaohei-illustrations
+│   ├── axtonliu/                1 Skill from smart-illustrator
+│   ├── JimLiu/                  4 Skills from baoyu-skills
+│   ├── SpaceZephyr/             19 Skills from design-buddy
+│   ├── ancoleman/               76 Skills from ai-design-components
 │   └── engineering/
 │       ├── git/commit-helper/
 │       └── testing/test-plan-writer/
@@ -75,7 +86,9 @@ mcp/<folder>/<server-name>.json
 │       └── docs/docs-search.json
 ├── docs/
 │   ├── imported-skills.md
-│   └── imported-chujianyun-skills.md
+│   ├── imported-chujianyun-skills.md
+│   ├── imported-playbook-skills.md
+│   └── skill-playbook-by-stage.md
 ├── licenses/
 │   └── CC-BY-NC-SA-4.0.txt
 └── THIRD_PARTY_NOTICES.md
